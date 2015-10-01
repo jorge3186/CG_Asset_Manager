@@ -1,0 +1,11 @@
+//check to see if shelf exists
+string $Install_shelfName = "shelf_PM_plugins";
+int $Install_shelfExists = `layout -q -ex $Install_shelfName`;
+if ($Install_shelfExists == 1)
+{
+deleteUI -layout $Install_shelfName;
+}
+
+
+//add shelf
+addNewShelfTab $Install_shelfName; 
